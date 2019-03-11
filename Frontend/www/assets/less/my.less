@@ -1,0 +1,41 @@
+
+.main_block{
+  position: relative;
+  top: 76px;
+  background-color: #faf9ee;
+  padding: 0px;
+  margin: 0px;
+
+  #item{
+    position: relative;
+    left: 42%;
+    width: 130px;
+    margin: 0px;
+    display: inline-block;
+
+
+    a{
+      color: black;
+
+      .badge{
+        background-color: darken(@mainColor, 6%);
+      }
+    }
+  }
+
+  .filter{
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    width: 55%;
+    left: 22%;
+
+    a{
+      color: darken(@mainColor, 6%);
+    }
+
+    li.active>a{
+      background-color: darken(@mainColor, 6%);
+    }
+  }
+}

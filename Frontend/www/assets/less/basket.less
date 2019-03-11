@@ -1,0 +1,67 @@
+
+.menu{
+  padding: 0px;
+  margin: 0px;
+  position: fixed;
+  background-color: rgb(247, 248, 255);
+  height: 100%;
+  right: 0px;
+  top:0px;
+  z-index: 20;
+  box-shadow: -2px 0px 15px rgba(0, 0, 0, 0.35);
+
+  .panel{
+    margin: 0px;
+  }
+
+  .infor{
+    position: relative;
+    bottom: 5px;
+
+    .second-column{
+      float: right;
+    }
+  }
+
+  .title{
+      width: 100%;
+      display: inline-block;
+      margin: 0px;
+      position: relative;
+      right: 8px;
+      color: black;
+        font-weight: 600;
+        font-size: 12px;
+        padding: 0px;
+
+        span{
+          background-color: darken(@mainColor, 6%);
+        }
+
+        small{
+          opacity: 0.84;
+          font-size: 7px;
+          padding: 0px;
+          position: relative;
+          left: 6%;
+        }
+  }
+
+  #order{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+
+     h6{
+       position: relative;
+       bottom: 36px;
+       right: 8px;
+       font-weight: bold;
+     }
+
+    .to-buy{
+      background-color: darken(@mainColor, 4%);
+
+    }
+  }
+}
