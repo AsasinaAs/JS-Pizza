@@ -10,7 +10,7 @@
   margin-bottom: 0px;
   color: white;
   opacity: 1;
-  background-color: darken(@mainColor, 4%);
+  background-image: linear-gradient(#eba169 20%, #ff9432 90%, #d36e13);
   border: none;
 }
 
@@ -24,4 +24,28 @@
   margin-right: 0px;
   padding: 0px;
   display: block;
+}
+@tablet: 768px;
+@tablet-area: 750px;
+
+// Mode: Desktop
+@desktop: 1024px;
+@desktop-area: 970px;
+
+// Area site
+.area {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: @tablet) {
+  .area {
+    width: @tablet-area;
+  }
+}
+
+@media (min-width: @desktop) {
+  .area {
+    width: @desktop-area;
+  }
 }
