@@ -26,6 +26,11 @@
                         <h4 class="text-uppercase">Pizza</h4>
                         <h3 class="text-uppercase">Kma</h3>
                     </a>
+                    <a class="discount">
+                        <img alt="Sale" src="assets/images/discount.svg">
+                        <div class="text-uppercase" id="sale">Цього тижня на все<hr class="dotted"></div>
+                        <p>-20%</p>
+                    </a>
                 </div>
                 <div class="col-lg-9">
                     <div class="contacts row">
@@ -45,7 +50,7 @@
             </div>
         </nav>
         <div class="main_block col-lg-9 col-md-9 col-sm-8 col-xs-7">
-            <div>
+            <div class="panel-body">
                 <div id="item" class="hidden-xs hidden-sm hidden-md">
                     <h3><a>Усі піци <span class="badge">8</span></a></h3>
                 </div>
@@ -64,6 +69,7 @@
                         <div class="col-sm-6 col-md-4">
                             <div class="thumbnail pizza-card">
                                 <img src="assets/images/pizza_7.jpg">
+                                <span class="label label-danger">Нова</span>
 
                                 <div class="caption"><h3>Імпреза</h3>
                                     <a class="kind">М'ясна піца</a>
@@ -101,6 +107,7 @@
                         <div class="col-sm-6 col-md-4">
                             <div class="thumbnail pizza-card">
                                 <img src="assets/images/pizza_2.jpg">
+                                <span class="label label-success">Популярна</span>
 
                                 <div class="caption"><h3>BBQ</h3>
                                     <a class="kind">М'ясна піца</a>
@@ -235,6 +242,10 @@
                     </div>
                 </div>
             </div>
+            <div class="panel-footer">
+                <p>Pizza.22 - практичний проект в межах курсу JavaScript в Києво-Могилянській Академії</p>
+                <p>Доставка піци не здійснюється</p>
+            </div>
         </div>
         <div class="menu col-lg-3 col-md-4 col-sm-4 col-xs-5">
             <div>
@@ -255,8 +266,14 @@
                             <img src="assets/images/pizza_2.jpg">
                         </div>
                         <div class="price1">
-                            <a>299</a>
+                            <a>556</a>
                             <p>грн.</p>
+                            <div class="buttons">
+                                <span class="glyphicon glyphicon-minus"></span>
+                                <span class="pizza-amount">4</span>
+                                <span class="glyphicon glyphicon-plus"></span>
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -271,8 +288,14 @@
                             <img src="assets/images/pizza_4.jpg">
                         </div>
                         <div class="price1">
-                            <a>299</a>
+                            <a>189</a>
                             <p>грн.</p>
+                            <div class="buttons">
+                                <span class="glyphicon glyphicon-minus"></span>
+                                <span class="pizza-amount">1</span>
+                                <span class="glyphicon glyphicon-plus"></span>
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -287,8 +310,14 @@
                             <img src="assets/images/pizza_1.jpg">
                         </div>
                         <div class="price1">
-                            <a>299</a>
+                            <a>179</a>
                             <p>грн.</p>
+                            <div class="buttons">
+                                <span class="glyphicon glyphicon-minus"></span>
+                                <span class="pizza-amount">1</span>
+                                <span class="glyphicon glyphicon-plus"></span>
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -305,14 +334,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-1">
-            <img alt="Sale" src="assets/images/discount.svg">
-            <a class="discount">
-                <h3 class="text-uppercase">Цього тижння на все</h3>
-                <a title="attribute"></a>
-                <a>-20%</a>
-            </a>
         </div>
     </div>
 </div>
