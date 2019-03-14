@@ -38,12 +38,15 @@
   padding: 0px;
   display: block;
 }
+
 @tablet: 768px;
-@tablet-area: 750px;
 
 // Mode: Desktop
-@desktop: 1024px;
-@desktop-area: 970px;
+@desktop: 1200px;
+@desktop-area: 750px;
+@middle-area: 91%;
+@point: 990px;
+@small-area: 98%;
 
 // Area site
 .area {
@@ -51,144 +54,748 @@
   margin-right: auto;
 }
 
-@media (min-width: @tablet) {
-  .area {
-    width: @tablet-area;
+@media (max-width: @tablet) {
+  .typical-panel{
+    height: 100px;
+
+    .infor{
+      width: 26%;
+      bottom: 23px;
+      right: 15px;
+
+      .size1{
+        margin-left: 15px;
+      }
+    }
+    .half{
+      left: 85%;
+      bottom: 79px;
+      img{
+        max-width: 88px;
+      }
+    }
+    h5{
+      font-size: 12px;
+      right: 6px;
+      bottom: 14px;
+    }
+    .price1{
+      margin: 0px;
+      padding: 0px;
+      right: 14px;
+      bottom: 105px;
+      left: 1px;
+
+      .buttons{
+        bottom: 4px;
+        left: 8px;
+
+        .glyphicon{
+          font-size: 7px;
+          border-radius: 15px;
+          padding-right: 6px;
+          padding-left: 6px;
+          padding-top: 6px;
+          padding-bottom: 13px;
+          height: 12px;
+        }
+        .glyphicon-minus{
+          color: white;
+          position: relative;
+          left: 7%;
+          border: 1px solid #d22832;
+          background-image: linear-gradient(#d22832 20%, #c4252f 70%, #b2212b);
+        }
+        .pizza-amount{
+          font-size: 9px;
+          position: relative;
+          left: 9%;
+          margin: 3px;
+        }
+        .glyphicon-plus{
+          color: white;
+          position: relative;
+          left: 11%;
+          border: 1px solid #09ab31;
+          background-image: linear-gradient(#09ab31 20%, #099f2d 70%, #088b27);
+        }
+        .glyphicon-remove{
+          color: @mainColor;
+          position: relative;
+          left: 21%;
+          border: 1px solid #c7c7c7;
+          background-image: linear-gradient(#fffaff 20%, #eae5ea 70%, #cdc8cd);
+        }
+      }
+      p {
+        font-size: 10px;
+        left: 1px;
+        top: 2px;
+      }
+      a {
+        font-size: 12px;
+      }
+    }
+  }
+  #order{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 140px;
+
+    .price1{
+      bottom: 35px;
+      left: 25%;
+
+      p {
+        font-size: 13px;
+        left: 1px;
+        top: 2px;
+      }
+      a {
+        font-size: 16px;
+      }
+    }
+    h6{
+      bottom: 13px;
+      right: 4px;
+      font-size: 10px;
+    }
+
+    .to-buy{
+      width: 36%;
+      bottom: 30px;
+      padding-right: 19%;
+      padding-left: 11%;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+  }
+  .title{
+    margin: 0px;
+    position: relative;
+    right: 8px;
+    color: black;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    .delete{
+      font-size: 7px;
+      padding: 0px;
+      position: relative;
+      left: 6%;
+    }
+  }
+  .navbar{
+    height: 60px;
+
+    button{
+      &.navbar-btn{
+        position: relative;
+        bottom: -8px;
+        left: 26%;
+        font-size: 8px;
+      }
+    }
+    .contacts{
+      height: 16px;
+      position: relative;
+      left: 15px;
+      #phone-number{
+        font-size: 12px;
+        position: relative;
+        bottom: 3px;
+      }
+    }
+    .page-header{
+      position: relative;
+      left: 105px;
+      width: 34%;
+    }
+    .pizza{
+      position: relative;
+      left: 20px;
+      display: none;
+    }
+  }
+  .main_block{
+    .area;
+    padding-left: 0px;
+    padding-right: 0px;
+    .page-header{
+
+    }
+    #pizza_list{
+      .area;
+      width: @small-area;
+      padding-left: 0px;
+      margin-left: 0px;
+
+      .pizza-card {
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        .label-success{
+          font-size: 15px;
+          position: absolute;
+          left: 66%;
+          bottom: 97%;
+          z-index: 10;
+        }
+        .label-danger{
+          font-size: 15px;
+          position: absolute;
+          left: 80%;
+          bottom: 97%;
+          z-index: 10;
+        }
+
+        img{
+          max-width: 210px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: @point)and(min-width: @tablet) {
+  .typical-panel{
+    height: 110px;
+
+    .infor{
+      width: 26%;
+      bottom: 21px;
+      right: 15px;
+
+      .size1{
+        margin-left: 15px;
+      }
+    }
+    .half{
+      left: 85%;
+      bottom: 79px;
+      img{
+        max-width: 100px;
+      }
+    }
+    h5{
+      font-size: 16px;
+      right: 6px;
+      bottom: 14px;
+    }
+    .price1{
+      margin: 0px;
+      padding: 0px;
+      right: 14px;
+      bottom: 105px;
+      left: 1px;
+
+      .buttons{
+        bottom: 8px;
+        left: 20px;
+
+        .glyphicon{
+          font-size: 7px;
+          border-radius: 15px;
+          padding-right: 7px;
+          padding-left: 7px;
+          padding-top: 7px;
+          padding-bottom: 14px;
+          height: 14px;
+        }
+        .glyphicon-minus{
+          color: white;
+          position: relative;
+          left: 7%;
+          border: 1px solid #d22832;
+          background-image: linear-gradient(#d22832 20%, #c4252f 70%, #b2212b);
+        }
+        .pizza-amount{
+          font-size: 9px;
+          position: relative;
+          left: 9%;
+          margin: 3px;
+        }
+        .glyphicon-plus{
+          color: white;
+          position: relative;
+          left: 11%;
+          border: 1px solid #09ab31;
+          background-image: linear-gradient(#09ab31 20%, #099f2d 70%, #088b27);
+        }
+        .glyphicon-remove{
+          color: @mainColor;
+          position: relative;
+          left: 21%;
+          border: 1px solid #c7c7c7;
+          background-image: linear-gradient(#fffaff 20%, #eae5ea 70%, #cdc8cd);
+        }
+      }
+      p {
+        font-size: 12px;
+        left: 1px;
+        bottom: 5px;
+      }
+      a {
+        font-size: 17px;
+        position: relative;
+        bottom: 9px;
+      }
+    }
+  }
+  #order{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 140px;
+
+    .price1{
+      bottom: 35px;
+      left: 23%;
+
+      p {
+        font-size: 17px;
+        left: 1px;
+        top: 2px;
+      }
+      a {
+        font-size: 19px;
+      }
+    }
+    h6{
+      bottom: 8px;
+      right: 4px;
+      font-size: 13px;
+    }
+
+    .to-buy{
+      width: 22%;
+      bottom: 30px;
+      padding-right: 19%;
+      padding-left: 11%;
+      padding-top: 13px;
+      padding-bottom: 13px;
+    }
+  }
+  .title{
+    margin: 0px;
+    position: relative;
+    right: 8px;
+    color: black;
+    font-size: 14px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+    .delete{
+      font-size: 9px;
+      padding: 0px;
+      position: relative;
+      left: 15%;
+    }
+  }
+  button{
+    &.btn{
+      position: relative;
+      left: 44%;
+      bottom: 19px;
+      font-size: 11px;
+    }
+  }
+  .contacts{
+    height: 18px;
+    position: relative;
+    left: 10px;
+  }
+  .page-header{
+    position: relative;
+    left: 105px;
+  }
+  .pizza{
+    position: relative;
+    left: 20px;
+  }
+  .main_block{
+    #pizza_list{
+      .area;
+      padding-left: 10px;
+      margin-left: 0px;
+
+      .pizza-card {
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        .label-success{
+          font-size: 13px;
+          position: absolute;
+          left: 66%;
+          bottom: 97%;
+          z-index: 10;
+        }
+        .label-danger{
+          font-size: 13px;
+          position: absolute;
+          left: 80%;
+          bottom: 97%;
+          z-index: 10;
+        }
+      }
+    }
+  }
+}
+@media (max-width: @desktop)and(min-width: @point) {
+  .typical-panel{
+    height: 110px;
+
+    .infor{
+      width: 26%;
+      bottom: 21px;
+      right: 15px;
+
+      .size1{
+        margin-left: 15px;
+      }
+    }
+    .half{
+      left: 90%;
+      bottom: 79px;
+      img{
+        max-width: 100px;
+      }
+    }
+    h5{
+      font-size: 16px;
+      right: 6px;
+      bottom: 14px;
+    }
+    .price1{
+      margin: 0px;
+      padding: 0px;
+      right: 14px;
+      bottom: 105px;
+      left: 1px;
+
+      .buttons{
+        bottom: 8px;
+        left: 30px;
+
+        .glyphicon{
+          font-size: 9px;
+          border-radius: 15px;
+          padding-right: 8px;
+          padding-left: 8px;
+          padding-top: 8px;
+          padding-bottom: 17px;
+          height: 20px;
+        }
+        .glyphicon-minus{
+          color: white;
+          position: relative;
+          left: 7%;
+          border: 1px solid #d22832;
+          background-image: linear-gradient(#d22832 20%, #c4252f 70%, #b2212b);
+        }
+        .pizza-amount{
+          font-size: 11px;
+          position: relative;
+          left: 9%;
+          margin: 3px;
+        }
+        .glyphicon-plus{
+          color: white;
+          position: relative;
+          left: 11%;
+          border: 1px solid #09ab31;
+          background-image: linear-gradient(#09ab31 20%, #099f2d 70%, #088b27);
+        }
+        .glyphicon-remove{
+          color: @mainColor;
+          position: relative;
+          left: 21%;
+          border: 1px solid #c7c7c7;
+          background-image: linear-gradient(#fffaff 20%, #eae5ea 70%, #cdc8cd);
+        }
+      }
+      p {
+        font-size: 12px;
+        left: 1px;
+      }
+      a {
+        font-size: 17px;
+        position: relative;
+        bottom: 4px;
+      }
+    }
+  }
+  #order{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 140px;
+
+    .price1{
+      bottom: 35px;
+      left: 25%;
+
+      p {
+        font-size: 17px;
+        left: 1px;
+        top: 2px;
+      }
+      a {
+        font-size: 20px;
+      }
+    }
+    h6{
+      bottom: 8px;
+      right: 4px;
+      font-size: 13px;
+    }
+
+    .to-buy{
+      width: 22%;
+      bottom: 30px;
+      padding-right: 19%;
+      padding-left: 11%;
+      padding-top: 13px;
+      padding-bottom: 13px;
+
+      a{
+        font-size: 18px;
+      }
+    }
+  }
+  .title{
+    margin: 0px;
+    position: relative;
+    right: 5px;
+    color: black;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .delete{
+      font-size: 9px;
+      padding: 0px;
+      position: relative;
+      left: 30%;
+    }
+  }
+  button{
+    &.btn{
+      position: relative;
+      left: 49%;
+      bottom: 20px;
+      font-size: 13px;
+    }
+  }
+  .contacts{
+    height: 15px;
+    position: relative;
+    left: 10px;
+  }
+  .page-header{
+    position: relative;
+    left: 105px;
+  }
+  .pizza{
+    position: relative;
+    left: 20px;
+  }
+  .main_block{
+    #pizza_list{
+      .area;
+      width: @middle-area;
+      padding-left: 0px;
+      margin-left: 0px;
+
+      .pizza-card {
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+
+        .label-success{
+          font-size: 12px;
+          position: absolute;
+          left: 66%;
+          bottom: 97%;
+          z-index: 10;
+        }
+        .label-danger{
+          font-size: 12px;
+          position: absolute;
+          left: 80%;
+          bottom: 97%;
+          z-index: 10;
+        }
+      }
+    }
   }
 }
 
 @media (min-width: @desktop) {
-  .area {
+  .typical-panel{
+    height: 110px;
+
+    .infor{
+      width: 26%;
+      bottom: 21px;
+      right: 15px;
+
+      .size1{
+        margin-left: 15px;
+      }
+    }
+    .half{
+      left: 90%;
+      bottom: 79px;
+      img{
+        max-width: 100px;
+      }
+    }
+    h5{
+      font-size: 16px;
+      right: 6px;
+      bottom: 14px;
+    }
+    .price1{
+      margin: 0px;
+      padding: 0px;
+      right: 14px;
+      bottom: 110px;
+      left: 1px;
+
+      .buttons{
+        bottom: 4px;
+        left: 30px;
+
+        .glyphicon{
+          font-size: 9px;
+          border-radius: 15px;
+          padding-right: 8px;
+          padding-left: 8px;
+          padding-top: 8px;
+          padding-bottom: 17px;
+          height: 20px;
+        }
+        .glyphicon-minus{
+          color: white;
+          position: relative;
+          left: 7%;
+          border: 1px solid #d22832;
+          background-image: linear-gradient(#d22832 20%, #c4252f 70%, #b2212b);
+        }
+        .pizza-amount{
+          font-size: 11px;
+          position: relative;
+          left: 9%;
+          margin: 3px;
+        }
+        .glyphicon-plus{
+          color: white;
+          position: relative;
+          left: 11%;
+          border: 1px solid #09ab31;
+          background-image: linear-gradient(#09ab31 20%, #099f2d 70%, #088b27);
+        }
+        .glyphicon-remove{
+          color: @mainColor;
+          position: relative;
+          left: 21%;
+          border: 1px solid #c7c7c7;
+          background-image: linear-gradient(#fffaff 20%, #eae5ea 70%, #cdc8cd);
+        }
+      }
+      p {
+        font-size: 12px;
+        left: 1px;
+        top: 2px;
+      }
+      a {
+        font-size: 17px;
+      }
+    }
+  }
+  #order{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 140px;
+
+    .price1{
+      bottom: 35px;
+      left: 18%;
+
+      p {
+        font-size: 17px;
+        left: 1px;
+        top: 2px;
+      }
+      a {
+        font-size: 20px;
+      }
+    }
+    h6{
+      bottom: 8px;
+      right: 4px;
+      font-size: 13px;
+    }
+
+    .to-buy{
+      width: 22%;
+      bottom: 30px;
+      padding-right: 12%;
+      padding-left: 8%;
+      padding-top: 13px;
+      padding-bottom: 13px;
+
+      a{
+        font-size: 18px;
+      }
+    }
+  }
+  .title{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .delete{
+      font-size: 10px;
+      padding: 0px;
+      position: relative;
+      left: 23%;
+    }
+  }
+  button{
+    &.btn{
+      position: relative;
+      left: 81%;
+      bottom: 20px;
+      font-size: 13px;
+    }
+  }
+  .contacts{
+    height: 15px;
+  }
+  #pizza_list{
+    .area;
     width: @desktop-area;
-  }
-}
-.make-row(@gutter: @grid-gutter-width) {
-  // Then clear the floated columns
-  .clearfix();
-
-  @media (min-width: @screen-sm-min) {
-    margin-left:  (@gutter / -2);
-    margin-right: (@gutter / -2);
-  }
-
-  // Negative margin nested rows out to align the content of columns
-  .row {
-    margin-left:  (@gutter / -2);
-    margin-right: (@gutter / -2);
-  }
-}
-
-// Generate the extra small columns
-.make-xs-column(@columns; @gutter: @grid-gutter-width) {
-  position: relative;
-  // Prevent columns from collapsing when empty
-  min-height: 1px;
-  // Inner gutter via padding
-  padding-left:  (@gutter / 2);
-  padding-right: (@gutter / 2);
-
-  // Calculate width based on number of columns available
-  @media (min-width: @grid-float-breakpoint) {
-    float: left;
-    width: percentage((@columns / @grid-columns));
-  }
-}
-
-// Generate the small columns
-.make-sm-column(@columns; @gutter: @grid-gutter-width) {
-  position: relative;
-  // Prevent columns from collapsing when empty
-  min-height: 1px;
-  // Inner gutter via padding
-  padding-left:  (@gutter / 2);
-  padding-right: (@gutter / 2);
-
-  // Calculate width based on number of columns available
-  @media (min-width: @screen-sm-min) {
-    float: left;
-    width: percentage((@columns / @grid-columns));
-  }
-}
-
-// Generate the small column offsets
-.make-sm-column-offset(@columns) {
-  @media (min-width: @screen-sm-min) {
-    margin-left: percentage((@columns / @grid-columns));
-  }
-}
-.make-sm-column-push(@columns) {
-  @media (min-width: @screen-sm-min) {
-    left: percentage((@columns / @grid-columns));
-  }
-}
-.make-sm-column-pull(@columns) {
-  @media (min-width: @screen-sm-min) {
-    right: percentage((@columns / @grid-columns));
-  }
-}
-
-// Generate the medium columns
-.make-md-column(@columns; @gutter: @grid-gutter-width) {
-  position: relative;
-  // Prevent columns from collapsing when empty
-  min-height: 1px;
-  // Inner gutter via padding
-  padding-left:  (@gutter / 2);
-  padding-right: (@gutter / 2);
-
-  // Calculate width based on number of columns available
-  @media (min-width: @screen-md-min) {
-    float: left;
-    width: percentage((@columns / @grid-columns));
-  }
-}
-
-// Generate the medium column offsets
-.make-md-column-offset(@columns) {
-  @media (min-width: @screen-md-min) {
-    margin-left: percentage((@columns / @grid-columns));
-  }
-}
-.make-md-column-push(@columns) {
-  @media (min-width: @screen-md-min) {
-    left: percentage((@columns / @grid-columns));
-  }
-}
-.make-md-column-pull(@columns) {
-  @media (min-width: @screen-md-min) {
-    right: percentage((@columns / @grid-columns));
-  }
-}
-
-// Generate the large columns
-.make-lg-column(@columns; @gutter: @grid-gutter-width) {
-  position: relative;
-  // Prevent columns from collapsing when empty
-  min-height: 1px;
-  // Inner gutter via padding
-  padding-left:  (@gutter / 2);
-  padding-right: (@gutter / 2);
-
-  // Calculate width based on number of columns available
-  @media (min-width: @screen-lg-min) {
-    float: left;
-    width: percentage((@columns / @grid-columns));
-  }
-}
-
-// Generate the large column offsets
-.make-lg-column-offset(@columns) {
-  @media (min-width: @screen-lg-min) {
-    margin-left: percentage((@columns / @grid-columns));
-  }
-}
-.make-lg-column-push(@columns) {
-  @media (min-width: @screen-lg-min) {
-    left: percentage((@columns / @grid-columns));
-  }
-}
-.make-lg-column-pull(@columns) {
-  @media (min-width: @screen-lg-min) {
-    right: percentage((@columns / @grid-columns));
+    .pizza-card {
+      .label-success{
+        font-size: 14px;
+        position: absolute;
+        left: 66%;
+        bottom: 97%;
+        z-index: 10;
+      }
+      .label-danger{
+        font-size: 14px;
+        position: absolute;
+        left: 80%;
+        bottom: 97%;
+        z-index: 10;
+      }
+    }
   }
 }
