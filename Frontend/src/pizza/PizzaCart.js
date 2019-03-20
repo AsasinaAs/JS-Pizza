@@ -13,7 +13,7 @@ var PizzaSize = {
 var Cart = [];
 
 //HTML едемент куди будуть додаватися піци
-var $cart = $(".pizza-card");
+var $cart = $(".cart-menu");
 
 function addToCart(pizza, size) {
     //Додавання однієї піци в кошик покупок
@@ -41,7 +41,7 @@ function initialiseCart() {
     //Фукнція віпрацьвуватиме при завантаженні сторінки
     //Тут можна наприклад, зчитати вміст корзини який збережено в Local Storage то показати його
     //TODO: ...
-
+   
     updateCart();
 }
 
