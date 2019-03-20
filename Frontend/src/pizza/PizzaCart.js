@@ -13,7 +13,7 @@ var PizzaSize = {
 var Cart = [];
 
 //HTML едемент куди будуть додаватися піци
-var $cart = $("#cart");
+var $cart = $(".pizza-card");
 
 function addToCart(pizza, size) {
     //Додавання однієї піци в кошик покупок

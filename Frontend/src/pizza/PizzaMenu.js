@@ -12,7 +12,7 @@ function showPizzaList(list) {
     //Очищаємо старі піци в кошику
     $pizza_list.html("");
 
-    //Онволення однієї піци
+    //Оновлення однієї піци
     function showOnePizza(pizza) {
         var html_code = Templates.PizzaMenu_OneItem({pizza: pizza});
 
