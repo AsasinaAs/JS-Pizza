@@ -1,10 +1,17 @@
 <div class="pizza-to-buy panel panel-default">
     <div class="panel-body typical-panel">
         <h5><%= pizza.title %> (<%= size %>)</h5>
+        <% if(size === 'small_size') { %>
         <div class="infor">
             <img alt="Size" src="assets/images/size-icon.svg" class="size1"><h6><%= pizza.small_size.size %></h6>
             <img alt="Weight" src="assets/images/weight.svg" class="size1"><h6><%= pizza.small_size.weight %></h6>
         </div>
+        <% } else { %>
+            <div class="infor">
+                <img alt="Size" src="assets/images/size-icon.svg" class="size1"><h6><%= pizza.big_size.size %></h6>
+                <img alt="Weight" src="assets/images/weight.svg" class="size1"><h6><%= pizza.big_size.weight %></h6>
+            </div>
+        <% } %>
         <div class="half">
             <img src="<%= pizza.icon %>">
         </div>
