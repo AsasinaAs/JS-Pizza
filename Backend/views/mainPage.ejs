@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Pizza</title>
+
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- Підключити основний файл LESS	-->
+    <link	rel="stylesheet/less"	type="text/css"	href="assets/less/main.less">
+
+    <!-- Підключити компілятор LESS	-->
+    <script	src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+
+<% include common/header.ejs %>
+
+<div class="main_block col-lg-9 col-md-9 col-sm-8 col-xs-7" id="main-b">
+    <div class="panel-body filter-body">
+        <div id="item" class="hidden-xs hidden-sm hidden-md">
+            <h3><a id="name_of_pizza">Усі піци </a><span class="badge" id="pizza-num">8</span></h3>
+        </div>
+        <div class="hidden-xs hidden-sm hidden-md">
+            <ul class="nav nav-pills filter">
+                <li role="presentation" class="active" id="all"><a href="#">Усі</a></li>
+                <li role="presentation" id="meat"><a href="#">М'ясні</a></li>
+                <li role="presentation" id="pineapple"><a href="#">З ананасами</a></li>
+                <li role="presentation" id="mushroom"><a href="#">З грибами</a></li>
+                <li role="presentation" id="sea"><a href="#">З морепродуктами</a></li>
+                <li role="presentation" id="vega"><a href="#">Вега</a></li>
+            </ul>
+        </div>
+        <div class="row " id="pizza_list">
+
+        </div>
+    </div>
+
+<% include common/footer.ejs %>
+
+</div>
+<div class="menu col-lg-3 col-md-4 col-sm-4 col-xs-5">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <h6 class="title ">Замовлення </h6>
+                <span class="badge" id="amount_of_pizza" href="#">3</span>
+                <a class="title del"><small class="delete">Очистити замовлення</small></a>
+            </div>
+        </div>
+    </div>
+    <div class="cart-menu">
+    </div>
+    <div id="order" class="panel panel-default">
+        <div class="panel-body">
+            <div id="to-buy">
+                <h6>Сума замовлення</h6>
+                <div class="price1" id="m-price">
+                    <a>0</a>
+                    <p>грн.</p>
+                </div>
+            </div>
+            <div class="to-buy">
+                <button class="buying btn" disabled onclick="location.href='http://localhost:5050/order.html'">Замовити</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<!-- jQuery JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
+
+<!--Bootsrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!--Own JavaScript -->
+<script type="text/javascript"  src="assets/js/main.js"> </script>
+</body>
+</html>

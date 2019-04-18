@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Pizza</title>
+
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- Підключити основний файл LESS	-->
+    <link	rel="stylesheet/less"	type="text/css"	href="assets/less/main.less">
+
+    <!-- Підключити компілятор LESS	-->
+    <script	src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+<style type="text/css">
+    input:valid:not(:placeholder-shown) {
+        border-color: green;
+    }
+    input:invalid:not(:placeholder-shown) {
+        border-color: #c02135;
+    }
+    .with-errors{
+        color: red;
+        text-align: left;
+        font-size: 12px;
+        transition: 2s;
+        overflow: hidden;
+        max-height: 0;
+        margin-top: 5px;
+    }
+    input:invalid:not(:placeholder-shown) + .with-errors {
+        max-height: 200px;
+    }
+
+</style>
+</head>
+<body>
+
+<% include common/header.ejs %>
+
+<div class="container-fluid">
+    <div class="row content-b">
+        <div class="main_block col-lg-9 col-md-9 col-sm-8 col-xs-7">
+            <div class="contact-form-1">
+                <div class="form-description-1">
+                    1. Контактні дані
+                </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <form class="form-horizontal needs-validation" role="form" data-toggle="validator">
+                            <div class="form-group name-group">
+                                <label class="col-sm-2 control-label" >Ім’я</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" type="text" id="inputName" placeholder="Ім’я Прізвище" pattern="^[ІіЇїЁёа-яА-Яa-zA-Z\s]+$" required >
+                                    <div class="with-errors">
+                                        <span class="form__error" id="error">Введіть тільки власне ім’я, без цифр</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group phone-group">
+                                <label class="col-sm-2 control-label">Телефон</label>
+                                <div class="col-sm-10">
+                                    <input  class="form-control" type="text" id="inputPhone" placeholder="+380994010999"  pattern="^([+]+380+[0,9]\d{8})|(0+[0,9]\d{8})" required>
+                                    <div class="with-errors">
+                                        <span class="form__error" id="error">Введіть номер телефону у форматі +380 або почніть з 0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group address-group">
+                                <label class="col-sm-2 control-label">Адреса</label>
+                                <div class="col-sm-10">
+                                    <input class="form-control" type="text" id="inputAdress"  placeholder="Київ, вул. Спаська, 2"  pattern=".{5,}" required>
+                                    <div class="with-errors">
+                                        <span class="form__error" id="error">Введіть адресу доставки піци</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group next-step">
+                                <button class="btn btn-warning btn-block next-step-button" type="submit">
+                                    Далі
+                                    <i class="glyphicon glyphicon-chevron-right icon-white">
+                                    </i>
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="col-md-5 summary">
+                        <div class=" bs-callout bs-callout-warning">
+                            <h5>Інформація про замовлення</h5>
+                            <p class="summery-time">
+                                <b>Приблизний час доставки:</b> невідомий
+                            </p>
+                            <p class="summery-adress">
+                                <b>Адреса доставки:</b> невідома
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 google-map">
+                <div id="googleMap"></div>
+            </div>
+        </div>
+
+            <% include common/footer.ejs %>
+        </div>
+
+        <div class="menu col-lg-3 col-md-4 col-sm-4 col-xs-5">
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <h6 class="title ">Замовлення </h6>
+                        <span class="badge" id="amount_of_pizza" href="#">3</span>
+                        <a class="title del"><small class="delete">Очистити замовлення</small></a>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-menu">
+            </div>
+            <div id="order" class="panel panel-default">
+                <div class="panel-body">
+                    <div id="to-buy">
+                        <h6>Сума замовлення</h6>
+                        <div class="price1">
+                            <a>0</a>
+                            <p>грн.</p>
+                        </div>
+                    </div>
+                    <div class="to-buy">
+                        <button class=" change-order" onclick="location.href='http://localhost:5050'">Редагувати</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- jQuery JavaScript -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!--Bootsrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!--Own JavaScript -->
+<script	type="text/javascript"
+           src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBu8EfHXfhweZE-W19Uo2d_UIFrmKvOeMo">
+</script>
+<script type="text/javascript"  src="assets/js/main.js"> </script>
+
+</body>
+</html>

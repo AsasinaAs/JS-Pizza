@@ -148,7 +148,20 @@ function updateCart() {
             $("#amount_of_pizza").text(Cart.length);
             updateCart();
         });
+        if($("button").hasClass("change-order")){
 
+            $node.find(".plus").hide();
+            $node.find(".minus").hide();
+            $node.find(".remove").hide();
+            var amount = cart_item.quantity;
+            if(amount==1){
+                $node.find(".pizza-amount").text(amount+'  піца');
+            }else if(amount>=2&&amount<=4){
+                $node.find(".pizza-amount").text(amount+'  піци');
+            }else{
+                $node.find(".pizza-amount").text(amount+'  піц');
+            }
+        }
 
         $cart.append($node);
 

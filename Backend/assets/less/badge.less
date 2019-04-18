@@ -1,0 +1,43 @@
+.discount {
+  position: fixed;
+  z-index: 20;
+  width: 100px;
+  height: 125px;
+  bottom: -1px;
+  left: 14px;
+  background-color: darken(@mainColor, 3%);
+  border: @bageColor;
+
+  img{
+    position: fixed;
+    left: 14px;
+    bottom: 123px;
+  }
+  #sale{
+    color: white;
+    text-align: center;
+    width: 70px;
+    font-weight: bold;
+    position: relative;
+    left: 12px;
+    top: 15px;
+
+    .dotted{
+      border: 2px dotted @bageColor;
+      border-style: none none dotted;
+      width: 80px;
+      color: #ffffff;
+      position: relative;
+      bottom: 10px;
+    }
+  }
+
+  p{
+    color: white;
+    text-align: center;
+    position: absolute;
+    left: 30px;
+    font-weight: bold;
+    bottom: 0px;
+  }
+}
