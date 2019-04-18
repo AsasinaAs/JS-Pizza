@@ -163,6 +163,7 @@ function updateCart() {
             }
         }
 
+
         $cart.append($node);
 
     }
